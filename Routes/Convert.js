@@ -3,8 +3,7 @@ const axios=require("axios")
 
 
 const convertCode=express.Router()
-// Openai API KEY
-// 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
+
 
 convertCode.post("/convert", async (req, res) => {
   const { code, language } = req.body;
