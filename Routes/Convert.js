@@ -17,7 +17,7 @@ convertCode.post("/convert", async (req, res) => {
       messages: [
         {
           role: "user",
-          content: `Convert the following code ${code}: to  ${language}`,
+          content: `Convert the following code ${code}: to  ${language} and highlight any errors for correction.`,
         },
       ],
       max_tokens: 100,
@@ -94,7 +94,20 @@ convertCode.post('/check-quality', async (req, res) => {
       messages: [
         {
           role: "user",
-          content: `Evaluate the quality of the following code: \n\n${code}`,
+          content: `Evaluate the quality of the following code: \n\n${code} 
+          Below is a percentage-wise evaluation of each parameter:
+          1. Code Consistency:
+          2. Code Performance:
+          3. Code Documentation:
+          4. Error Handling:
+          5. Code Testability:
+          6. Code Modularity:
+          7. Code Complexity:
+          8. Code Duplication:
+          9. Code Readability:
+          
+          A detailed explanation of each parameter follows:
+          `,
         },
       ],
       max_tokens: 150,
