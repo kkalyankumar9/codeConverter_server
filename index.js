@@ -1,14 +1,16 @@
 const express =require("express");
 const convertCode = require("./Routes/Convert");
+const cors=require("cors")
 require('dotenv').config();
-const cors = require('cors');
 
 
-const app=express()
 const PORT = process.env.PORT || 8000;
+const app=express()
+app.use(cors());
+
 app.use(express.json())
 app.use("/",convertCode)
-app.use(cors());
+
 
 
 app.listen(PORT, () => {
