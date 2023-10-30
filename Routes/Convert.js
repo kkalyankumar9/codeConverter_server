@@ -96,15 +96,15 @@ convertCode.post('/check-quality', async (req, res) => {
           role: "user",
           content: `Evaluate the quality of the following code: \n\n${code} 
           Below is a percentage-wise evaluation of each parameter:
-          1. Code Consistency:
-          2. Code Performance:
-          3. Code Documentation:
-          4. Error Handling:
-          5. Code Testability:
-          6. Code Modularity:
-          7. Code Complexity:
-          8. Code Duplication:
-          9. Code Readability:
+          1. Code Consistency:[Percentage]
+          2. Code Performance:[Percentage]
+          3. Code Documentation:[Percentage]
+          4. Error Handling:[Percentage]
+          5. Code Testability:[Percentage]
+          6. Code Modularity:[Percentage]
+          7. Code Complexity:[Percentage]
+          8. Code Duplication:[Percentage]
+          9. Code Readability:[Percentage]
           
           A detailed explanation of each parameter follows:
           `,
